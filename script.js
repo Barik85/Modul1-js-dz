@@ -1,6 +1,6 @@
-const line1 = 'йцукенгшщзхъ';
-const line2 = 'фывапролджэ';
-const line3 = 'ячсмитьбю.';
+const line1 = 'qwertyuiop[]\\';
+const line2 = 'asdfghjkl;';
+const line3 = 'zxcvbnm,./';
 const lengthLine1 = line1.length;
 const lengthLine2 = line2.length;
 const lengthLine3 = line3.length;
@@ -15,29 +15,50 @@ document.writeln(`первая буква первой строки: ${line1.cha
 document.writeln(`первая буква второй строки: ${line2.charAt(0)}, последняя буква второй строки: ${line2.charAt(lengthLine2-1)}<br>`);
 document.writeln(`первая буква третей строки: ${line3.charAt(0)}, последняя буква третей строки: ${line3.charAt(lengthLine3-1)}<br>`);
 
-var iPozition = line1.indexOf('и');
+var opBracketPozition = line1.indexOf('[');
+var clBracketPozition = line1.indexOf(']');
 document.writeln(`В первой строке `)
-if(iPozition===-1){
-    document.writeln(`и не найдено<br>`)
+if(opBracketPozition===-1){
+    document.writeln(`[ не найдено<br>`)
 }
 else{
-document.writeln(`и находится под номером ${iPozition}<br>`);
+document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
+}
+if(clBracketPozition===-1){
+    document.writeln(`] не найдено<br>`)
+}
+else{
+document.writeln(`] находится под номером ${clBracketPozition}<br>`);
 }
 
-var iPozition = line2.indexOf('и');
+var opBracketPozition = line2.indexOf('[');
+var clBracketPozition = line2.indexOf(']');
 document.writeln(`Во второй строке `)
-if(iPozition===-1){
-    document.writeln(`и не найдено<br>`)
+if(opBracketPozition===-1){
+    document.writeln(`[ не найдено<br>`)
 }
 else{
-document.writeln(`и находится под номером ${iPozition}<br>`);
+document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
+}
+if(clBracketPozition===-1){
+    document.writeln(`] не найдено<br>`)
+}
+else{
+document.writeln(`] находится под номером ${clBracketPozition}<br>`);
 }
 
-var iPozition = line3.indexOf('и');
+var opBracketPozition = line3.indexOf('[');
+var clBracketPozition = line3.indexOf(']');
 document.writeln(`В третей строке `)
-if(iPozition===-1){
-    document.writeln(`и не найдено<br>`)
+if(opBracketPozition===-1){
+    document.writeln(`[ не найдено<br>`)
 }
 else{
-document.writeln(`и находится под номером ${iPozition}<br>`);
+document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
+}
+if(clBracketPozition===-1){
+    document.writeln(`] не найдено<br>`)
+}
+else{
+document.writeln(`] находится под номером ${clBracketPozition}<br>`);
 }
