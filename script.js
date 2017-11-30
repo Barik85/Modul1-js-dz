@@ -21,47 +21,52 @@ document.writeln(`первая буква первой строки: ${line1.cha
 document.writeln(`первая буква второй строки: ${line2.charAt(0)}, последняя буква второй строки: ${line2.charAt(lengthLine2 - 1)}<br>`);
 document.writeln(`первая буква третей строки: ${line3.charAt(0)}, последняя буква третей строки: ${line3.charAt(lengthLine3 - 1)}<br>`);
 
-var opBracketPozition = line1.indexOf('[');
+let opBracketPosition = line1.indexOf('[');
 
-var clBracketPozition = line1.indexOf(']');
+let clBracketPosition = line1.indexOf(']');
 
 document.writeln(`В первой строке `);
-opBracketPozition === -1 ? document.writeln(`[ не найдено<br>`) : 
-document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
+opBracketPosition === -1 ? document.writeln(`[ не найдено<br>`) : 
+document.writeln(`[ находится под номером ${opBracketPosition}<br>`);
 
-clBracketPozition === -1 ? document.writeln(`] не найдено<br>`) :
-document.writeln(`] находится под номером ${clBracketPozition}<br>`);
-
-
-var opBracketPozition = line2.indexOf('[');
-var clBracketPozition = line2.indexOf(']');
-document.writeln(`Во второй строке `)
-opBracketPozition === -1 ? document.writeln(`[ не найдено<br>`) :
-    document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
-
-clBracketPozition === -1 ? document.writeln(`] не найдено<br>`) :
-document.writeln(`] находится под номером ${clBracketPozition}<br>`);
+clBracketPosition === -1 ? document.writeln(`] не найдено<br>`) :
+document.writeln(`] находится под номером ${clBracketPosition}<br>`);
 
 
-var opBracketPozition = line3.indexOf('[');
-var clBracketPozition = line3.indexOf(']');
-document.writeln(`В третей строке `)
+opBracketPosition = line2.indexOf('[');
+clBracketPosition = line2.indexOf(']');
+document.writeln(`Во второй строке `);
+opBracketPosition === -1 ? document.writeln(`[ не найдено<br>`) :
+    document.writeln(`[ находится под номером ${opBracketPosition}<br>`);
 
-opBracketPozition === -1 ? document.writeln(`[ не найдено<br>`) :
-    document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
+clBracketPosition === -1 ? document.writeln(`] не найдено<br>`) :
+document.writeln(`] находится под номером ${clBracketPosition}<br>`);
 
-clBracketPozition === -1 ? document.writeln(`] не найдено<br>`) :
-document.writeln(`] находится под номером ${clBracketPozition}<br>`);
+
+opBracketPosition = line3.indexOf('[');
+clBracketPosition = line3.indexOf(']');
+document.writeln(`В третей строке `);
+
+opBracketPosition === -1 ? document.writeln(`[ не найдено<br>`) :
+    document.writeln(`[ находится под номером ${opBracketPosition}<br>`);
+
+clBracketPosition === -1 ? document.writeln(`] не найдено<br>`) :
+document.writeln(`] находится под номером ${clBracketPosition}<br>`);
 
 document.writeln(`а теперь массив <br>`)
 let arr = [String(line1), String(line2), String(line3)];
-var opBracketPozition = arr.indexOf('[');
-var clBracketPozition = arr.indexOf(']');
-opBracketPozition === -1 ? document.writeln(`[ не найдено<br>`) :
-document.writeln(`[ находится под номером ${opBracketPozition}<br>`);
+arr.forEach(function(item, i, arr){
 
-clBracketPozition === -1 ? document.writeln(`] не найдено<br>`) :
-document.writeln(`] находится под номером ${clBracketPozition}<br>`);
+opBracketPosition = item.indexOf('[');
+clBracketPosition = item.indexOf(']');
+
+opBracketPosition === -1 ? document.writeln(`в строке ${i+1} [ не найдено<br>`) :
+document.writeln(`в строке ${i+1} [ находится под номером ${opBracketPosition}<br>`);
+
+clBracketPosition === -1 ? document.writeln(`в строке ${i+1} ] не найдено<br>`) :
+document.writeln(`в строке ${i+1} ] находится под номером ${clBracketPosition}<br>`);
+
+});
 
 console.log(`Доп задание1`);
 const a = 6;
@@ -103,7 +108,7 @@ console.log(`Доп задание 3`)
    success: in all uppercase
 */
 
-const message = prompt("Enter any message:", "");
+const message = prompt("Доп задание 3. Enter any message:", "");
 
 // здесь заменить 'str' и 'STR' на message и вызов метода
 let inLowerCase = message.toLocaleLowerCase; // -> "success: in all lowercase"
